@@ -1,0 +1,33 @@
+# Tinkertanker Logos
+
+Downloadable gallery of official Tinkertanker, Tinkercademy, and legacy brand logos.
+
+Browse the gallery at [logos.tk.sg](https://logos.tk.sg).
+
+## Assets
+
+The `logos/` directory contains the original full-resolution PNG files from the former [tk.sg/logos](https://tk.sg/logos) Zight collection. Original filenames are preserved.
+
+Refresh the collection and manifest with:
+
+```bash
+ruby tools/import_zight_collection.rb
+```
+
+## Local preview
+
+```bash
+docker build -t tinkertanker-logos .
+docker run --rm -p 8080:8080 tinkertanker-logos
+```
+
+Then open `http://localhost:8080`.
+
+## Deployment
+
+The production host runs the static gallery in Docker behind the shared `devtksg` nginx proxy network. Deploy a published ref with:
+
+```bash
+REF=main ./deploy.sh
+```
+

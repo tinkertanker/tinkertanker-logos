@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Download official Tinkertanker, Tinkercademy, and legacy brand logos."
+    />
+    <meta name="theme-color" content="#f4f3ef" />
+    <title>Tinkertanker Logos</title>
+    <link rel="icon" type="image/png" href="/logos/01 Tinkertanker Primary icon Colour on Light 1152 W.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#logo-grid">Skip to logos</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Tinkertanker Logos home">
+        <img
+          src="/logos/01 Tinkertanker Primary icon Colour on Light 1152 W.png"
+          alt=""
+          width="40"
+          height="40"
+        />
+        <span>Logos</span>
+      </a>
+
+      <label class="select-all">
+        <input id="select-all" type="checkbox" />
+        <span>Select all</span>
+      </label>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Logo filters">
+        <div>
+          <h1>Brand assets</h1>
+          <p id="result-count">Loading logos...</p>
+        </div>
+        <div id="category-filters" class="category-filters" role="group" aria-label="Filter by brand"></div>
+      </section>
+
+      <section class="collection" aria-label="Logo collection">
+        <div id="logo-grid" class="logo-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>No logos match this filter.</p>
+        <p id="load-error" class="load-error" hidden>
+          The logo collection could not be loaded. Please refresh and try again.
+        </p>
+      </section>
+    </main>
+
+    <aside id="selection-bar" class="selection-bar" aria-live="polite" hidden>
+      <div class="selection-summary">
+        <span id="selection-count" class="selection-count">0</span>
+        <span><strong>selected</strong><small>PNG files</small></span>
+      </div>
+      <div class="selection-actions">
+        <button id="clear-selection" class="text-button" type="button">Clear</button>
+        <button id="download-selection" class="primary-button" type="button">
+          <span class="download-icon" aria-hidden="true">↓</span>
+          <span>Download</span>
+        </button>
+      </div>
+    </aside>
+
+    <div id="download-notice" class="download-notice" role="status" hidden></div>
+
+    <template id="filter-template">
+      <button class="filter-button" type="button"></button>
+    </template>
+
+    <template id="logo-template">
+      <article class="logo-item">
+        <div class="logo-stage">
+          <label class="logo-select">
+            <input type="checkbox" />
+            <span class="checkmark" aria-hidden="true">✓</span>
+            <span class="sr-only">Select</span>
+          </label>
+          <img loading="lazy" />
+          <a class="item-download" download>
+            <span class="download-icon" aria-hidden="true">↓</span>
+            Download PNG
+          </a>
+        </div>
+        <div class="logo-meta">
+          <div>
+            <p class="logo-category"></p>
+            <h2></h2>
+          </div>
+          <p class="logo-size"></p>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>
+
