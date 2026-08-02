@@ -26,7 +26,8 @@ def category_for(name)
   case name
   when /Tinkercademy/i then "Tinkercademy"
   when /Tinkertanker/i then "Tinkertanker"
-  else "Legacy"
+  when /\b(?:GH|TCPL)\b/i then "Tinker Class"
+  else "Other"
   end
 end
 
@@ -88,4 +89,3 @@ manifest = {
 
 File.write(MANIFEST_PATH, JSON.pretty_generate(manifest) + "\n")
 puts "Imported #{items.length} logos into #{OUTPUT_DIR}"
-

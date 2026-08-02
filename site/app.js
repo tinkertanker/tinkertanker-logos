@@ -22,6 +22,8 @@ const displayName = (filename) => filename
   .replace(/^\d{2}\s+/, "")
   .replace(/\s+-\s+(?:\d+w|\d+\s+w)$/i, "")
   .replace(/\s+(?:\d+w|\d+\s+w)$/i, "")
+  .replace(/^GH\b/, "Get Hacking")
+  .replace(/\bTCPL\b/g, "Tinker Class")
   .replace(/\s+/g, " ");
 
 const visibleLogos = () => logos.filter(
@@ -127,7 +129,7 @@ const renderLogos = () => {
 };
 
 const renderFilters = () => {
-  const preferredOrder = ["Tinkertanker", "Tinkercademy", "Legacy"];
+  const preferredOrder = ["Tinkertanker", "Tinkercademy", "Tinker Class", "Other"];
   const available = new Set(logos.map((logo) => logo.category));
   const categories = ["All", ...preferredOrder.filter((category) => available.has(category))];
 
