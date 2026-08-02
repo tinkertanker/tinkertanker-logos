@@ -10,6 +10,27 @@ COLLECTION_URL = "https://cld.tk.sg/collections/VrfVJr/Logos"
 OUTPUT_DIR = File.expand_path("../logos", __dir__)
 MANIFEST_PATH = File.expand_path("../site/logos.json", __dir__)
 
+SOURCE_LINKS = {
+  "Tinkercademy - vertical - black text - 1472w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1VWiM_ahNziGEDysvG4B1XhN6Rtb-t9VC/view?usp=drivesdk" }],
+  "Tinkercademy - vertical - white text - 1472w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1I8uytj6eimZ7-G-yFPp7efjz0VmZn_ml/view?usp=drivesdk" }],
+  "Tinkercademy - horizontal - white text - 3680w.png" => [{ "label" => "Source package (ZIP)", "url" => "https://drive.google.com/file/d/1-yOVRs3LltW2z1VIBGtMBXquxdyQPwU_/view?usp=drivesdk" }],
+  "Tinkercademy - horizontal - black text - 3680w.png" => [{ "label" => "Source package (ZIP)", "url" => "https://drive.google.com/file/d/1-yOVRs3LltW2z1VIBGtMBXquxdyQPwU_/view?usp=drivesdk" }],
+  "Tinkercademy - icon - colour - 1152w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/182LD-3Y9IglNAnnnCqqTcJR0tC8osmr1/view?usp=drivesdk" }],
+  "GH logo with tagline on white - 4544w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1i9Zt3FJC3vRdxAkXhdCrYgyUe5ld5BvO/view?usp=drivesdk" }],
+  "GH logo - vertical.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1hFhohBq4q0qR__iYMnQzA0dV79bX6uxV/view?usp=drivesdk" }],
+  "GH logo - white text - 1152w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1iKn2Lfd9hgF4qU53cIPUd_E5oARMnxUC/view?usp=drivesdk" }],
+  "GH logo - horizontal - white text - 6240w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1fGx0Dr0FOTUt0yoB0DHwbldKGINdNO4a/view?usp=drivesdk" }],
+  "GH logo - horizontal - 6240w.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1iGh4LC7Q1uSNIXR_VH7w7Ps4H5ThJC28/view?usp=drivesdk" }],
+  "GH and TCPL icon.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1i0Vr4NU7XnQ9Ffn5L1LBQQrU0SXlSBlk/view?usp=drivesdk" }],
+  "TCPL logo - horizontal.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1eobZhQCyPRAH4n5Ehc39yPx7ht80bPFG/view?usp=drivesdk" }],
+  "02 Tinkertanker Tertiary Logo Colour on Dark 4400 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1cfEHzMUqDwBLwgSJx5aCO7H_n_HT57D3/view?usp=drivesdk" }],
+  "02 Tinkertanker Primary Logo Colour on Dark 3456 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1cejcKaf0alC6qElvJurtsyFuXzuELRGF/view?usp=drivesdk" }],
+  "02 Tinkertanker Primary icon Colour On Dark 1152 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1dm70QN45w6H6kWJcsRe0SovJFSiTMNWI/view?usp=drivesdk" }],
+  "01 Tinkertanker Primary Logo Colour on Light 3456 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1eOVjm5hL2RwcQmii93UYyhMU4lV5xpkL/view?usp=drivesdk" }],
+  "01 Tinkertanker Primary icon Colour on Light 1152 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1dXTvT682ip5sW4Ki9fS7wUYQhM2wcY_K/view?usp=drivesdk" }],
+  "01 Tinkertanker Tertiary Logo Colour on Light 4400 W.png" => [{ "label" => "SVG source", "url" => "https://drive.google.com/file/d/1ebJzXuZgNIUq2PcfsTp6HmjO0HYoQ_B6/view?usp=drivesdk" }],
+}.freeze
+
 def fetch(url, redirects = 5)
   raise "Too many redirects for #{url}" if redirects.zero?
 
@@ -77,6 +98,7 @@ items.each_with_index do |item, index|
     "height" => height,
     "created_at" => created_at&.slice(0, 10),
     "source_url" => "https://cld.tk.sg/#{item["id"]}",
+    "sources" => SOURCE_LINKS.fetch(item["filename"], []),
   )
 end
 

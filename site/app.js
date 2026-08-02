@@ -95,6 +95,8 @@ const renderLogos = () => {
     const heading = fragment.querySelector("h2");
     const category = fragment.querySelector(".logo-category");
     const size = fragment.querySelector(".logo-size");
+    const sourceLinks = fragment.querySelector(".source-links");
+    const sourceList = fragment.querySelector(".source-list");
     const name = displayName(logo.filename);
 
     item.style.setProperty("--item-index", index);
@@ -114,6 +116,18 @@ const renderLogos = () => {
     heading.title = logo.filename;
     category.textContent = logo.category;
     size.textContent = `${logo.width.toLocaleString()} × ${logo.height.toLocaleString()}`;
+
+    if (logo.sources?.length) {
+      logo.sources.forEach((source) => {
+        const link = document.createElement("a");
+        link.href = source.url;
+        link.textContent = source.label;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        sourceList.append(link);
+      });
+      sourceLinks.hidden = false;
+    }
 
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) selected.add(logo.slug);

@@ -322,6 +322,45 @@ label { -webkit-tap-highlight-color: transparent; }
   white-space: nowrap;
 }
 
+.source-links {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0.75rem 0.1rem 0;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.74rem;
+}
+
+.source-links[hidden] { display: none; }
+
+.source-note {
+  flex: 0 1 auto;
+  color: var(--muted);
+}
+
+.source-list {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+.source-list a {
+  color: var(--ink);
+  font-weight: 750;
+  text-underline-offset: 0.18em;
+}
+
+.source-list a:hover { color: var(--accent); }
+
+.source-list a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .selection-bar {
   position: fixed;
   z-index: 20;
