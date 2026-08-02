@@ -19,7 +19,12 @@ ssh ${SSH_OPTS} "${REMOTE_HOST}" "
 
   cd \"${REMOTE_PATH}\"
   git fetch --prune origin
-  git checkout --detach \"${REF}\"
+  if git rev-parse --verify --quiet \"origin/${REF}^{commit}\" >/dev/null; then
+    deploy_ref=\"origin/${REF}\"
+  else
+    deploy_ref=\"${REF}\"
+  fi
+  git checkout --detach \"\${deploy_ref}\"
 
   docker compose up -d --build --remove-orphans
   docker compose ps
@@ -50,4 +55,3 @@ ssh ${SSH_OPTS} "${REMOTE_HOST}" "
 
 curl --fail --silent --show-error --retry 5 --retry-delay 2 https://logos.tk.sg/healthz
 echo "Deployed ${REF} to https://logos.tk.sg"
-
