@@ -1,0 +1,15 @@
+{
+  "name": "tinkertanker-logos",
+  "account_id": "b8b1032c61d9475cd00229c74db7ec72",
+  "compatibility_date": "2026-09-12",
+  "build": {
+    "command": "bash tools/build-static.sh"
+  },
+  "assets": {
+    "directory": "./output/cloudflare",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    { "pattern": "logos.tk.sg", "custom_domain": true }
+  ]
+}
