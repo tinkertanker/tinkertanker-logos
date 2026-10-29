@@ -8,6 +8,14 @@ Official Tinkertanker, Tinkercademy, Get Hacking, and Tinker Class logos, availa
 
 Verified Google Drive design sources are linked below matching PNGs and require Tinkertanker Google Workspace access.
 
+## Agent guidance
+
+[`/llms.txt`](https://logos.tk.sg/llms.txt) explains brand, layout, background contrast, file formats, source access, and direct downloads for every supplied PNG. It is discoverable from the homepage's HTML metadata and HTTP `Link` header. [`/logos.json`](https://logos.tk.sg/logos.json) remains the machine-readable asset catalog.
+
+Selection advice describes the supplied artwork, not new brand rules or usage permissions. Keep the guidance's URLs and dimensions aligned with the catalog when refreshing assets. In particular, the catalog groups Get Hacking and Tinker Class together; their wordmarks are not interchangeable.
+
+WebMCP is not needed for this read-only static library: agents can fetch the guidance, catalog, and assets directly without a browser session or tool registration. Reassess if the site gains actions that cannot be expressed as ordinary asset URLs.
+
 Refresh the collection and manifest with:
 
 ```bash

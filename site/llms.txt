@@ -1,0 +1,63 @@
+# Tinkertanker logo library
+
+> Logo-selection guidance for https://logos.tk.sg. Public downloads are the 18 original PNGs in this library. Choose by the brand actually shown in the artwork, then layout and background; do not substitute a related brand.
+
+## Catalog and downloads
+
+- [Logo gallery](https://logos.tk.sg/): visual previews and individual or multi-file PNG downloads.
+- [Asset catalog](https://logos.tk.sg/logos.json): all filenames, site-relative `path` values, actual pixel `width` and `height`, preview backgrounds, and internal design-source links.
+
+For a direct download, resolve an item's `path` against https://logos.tk.sg and percent-encode spaces as `%20`. The PNG links below are ready to fetch without JavaScript or sign-in. `source_url` points to the former collection's item page, not the direct PNG. `sources` contains Google Drive design-source pages, not public image URLs.
+
+## How to choose
+
+1. Match the requested name: Tinkertanker, Tinkercademy, Get Hacking, or Tinker Class. If the request only says “the company logo” and the intended brand is unclear, ask rather than guess.
+2. Use a wordmark when the brand name needs to be readable. Horizontal layouts fit wide spaces; vertical/stacked layouts fit taller spaces. Use an icon-only asset when a symbol is requested or the brand is already identified nearby. These are practical selection suggestions, not a formal brand manual.
+3. Match the actual destination background. Tinkertanker has explicit on-Light and on-Dark versions. Tinkercademy has black-text and white-text versions. Get Hacking has colour-text and white-text versions. Use light-background/black-or-colour-text versions on light surfaces, and on-Dark/white-text versions on dark surfaces. Inspect the coloured elements too: a white wordmark alone does not guarantee sufficient contrast on a photo or coloured background.
+4. The catalog's `preview` value is the gallery background (`light` or `dark`), inferred from filenames; it is not a separate approval rule. All current PNGs have transparency. A filename saying “on white” describes the intended background, not an opaque white canvas. Preview the final composite before using it.
+5. Use the actual dimensions in the catalog, not width hints in filenames: some differ by a pixel. Preserve aspect ratio and avoid upscaling raster artwork beyond its useful resolution. Choose a source/vector workflow if the PNG is too small for the required output.
+
+## Tinkertanker
+
+The Primary Logo combines the robot with a stacked TINKER/TANKER wordmark. It is a practical starting point for an otherwise unspecified Tinkertanker logo request. The Tertiary Logo is a wide, single-line TINKERTANKER wordmark with the robot. “Primary” and “Tertiary” are the supplied asset names; this library does not provide a Secondary logo.
+
+- [Primary logo, light background, 3456 × 1153 PNG](https://logos.tk.sg/logos/01%20Tinkertanker%20Primary%20Logo%20Colour%20on%20Light%203456%20W.png)
+- [Primary logo, dark background, 3456 × 1153 PNG](https://logos.tk.sg/logos/02%20Tinkertanker%20Primary%20Logo%20Colour%20on%20Dark%203456%20W.png)
+- [Tertiary wide logo, light background, 4400 × 721 PNG](https://logos.tk.sg/logos/01%20Tinkertanker%20Tertiary%20Logo%20Colour%20on%20Light%204400%20W.png)
+- [Tertiary wide logo, dark background, 4400 × 721 PNG](https://logos.tk.sg/logos/02%20Tinkertanker%20Tertiary%20Logo%20Colour%20on%20Dark%204400%20W.png)
+- [Robot icon only, light background, 1152 × 1153 PNG](https://logos.tk.sg/logos/01%20Tinkertanker%20Primary%20icon%20Colour%20on%20Light%201152%20W.png)
+- [Robot icon only, dark background, 1152 × 1153 PNG](https://logos.tk.sg/logos/02%20Tinkertanker%20Primary%20icon%20Colour%20On%20Dark%201152%20W.png)
+
+## Tinkercademy
+
+These assets show the glasses icon and, except for the icon-only file, the TINKERCADEMY wordmark. Pick horizontal or vertical to fit the available space; choose black text for light backgrounds or white text for dark backgrounds. The single icon-only file is previewed on light; no separate dark-background icon is supplied.
+
+- [Horizontal, black text, 3680 × 576 PNG](https://logos.tk.sg/logos/Tinkercademy%20-%20horizontal%20-%20black%20text%20-%203680w.png)
+- [Horizontal, white text, 3680 × 576 PNG](https://logos.tk.sg/logos/Tinkercademy%20-%20horizontal%20-%20white%20text%20-%203680w.png)
+- [Vertical, black text, 1472 × 1280 PNG](https://logos.tk.sg/logos/Tinkercademy%20-%20vertical%20-%20black%20text%20-%201472w.png)
+- [Vertical, white text, 1472 × 1280 PNG](https://logos.tk.sg/logos/Tinkercademy%20-%20vertical%20-%20white%20text%20-%201472w.png)
+- [Glasses icon only, colour, 1152 × 1153 PNG](https://logos.tk.sg/logos/Tinkercademy%20-%20icon%20-%20colour%20-%201152w.png)
+
+## Get Hacking and Tinker Class
+
+Important catalog caveat: the gallery and JSON group all `GH` and `TCPL` files under the category “Tinker Class.” This grouping does not mean the wordmarks are interchangeable. `GH` files with text say GET HACKING; `TCPL logo - horizontal.png` says TINKER CLASS. Select by that actual text, not by `category` alone. Both use the same illustrated icon in the supplied artwork.
+
+For Get Hacking, choose a horizontal or vertical wordmark and the appropriate text contrast. The tagline variant includes “THE STORE FOR CURIOUS TINKERERS.” Choose it when that tagline is wanted and can remain legible.
+
+- [Get Hacking horizontal, colour text for light backgrounds, 6241 × 1153 PNG](https://logos.tk.sg/logos/GH%20logo%20-%20horizontal%20-%206240w.png)
+- [Get Hacking horizontal, white text for dark backgrounds, 6240 × 1152 PNG](https://logos.tk.sg/logos/GH%20logo%20-%20horizontal%20-%20white%20text%20-%206240w.png)
+- [Get Hacking vertical, colour text for light backgrounds, 1152 × 1345 PNG](https://logos.tk.sg/logos/GH%20logo%20-%20vertical.png)
+- [Get Hacking vertical, white text for dark backgrounds, 1152 × 1344 PNG](https://logos.tk.sg/logos/GH%20logo%20-%20white%20text%20-%201152w.png)
+- [Get Hacking with tagline, light background, 4545 × 1153 PNG](https://logos.tk.sg/logos/GH%20logo%20with%20tagline%20on%20white%20-%204544w.png)
+- [Tinker Class horizontal wordmark, colour text for light backgrounds, 3264 × 577 PNG](https://logos.tk.sg/logos/TCPL%20logo%20-%20horizontal.png)
+- [Shared GH and TCPL icon only, colour, 1152 × 1153 PNG](https://logos.tk.sg/logos/GH%20and%20TCPL%20icon.png)
+
+No dark-background Tinker Class wordmark or tagline variant is supplied. If a suitable supplied asset is unavailable, ask for a suitable source or use a contrasting light panel in the layout rather than inventing another variant.
+
+## Formats, sources, and limits
+
+- Public asset downloads here are PNG only, with transparency. There are no public SVG, PDF, EPS, JPEG, or ZIP logo downloads on this site; do not invent URLs by changing extensions.
+- For scalable or editable artwork, consult the matching item's `sources` in the catalog. Links labelled “SVG source” and “Source package (ZIP)” are internal Google Drive pages requiring Tinkertanker Google Workspace access. In particular, the Tinkercademy horizontal assets link to a source package, not an individually hosted SVG. If access is unavailable, request an export from the asset owner; do not claim a source was downloaded or verified through sign-in.
+- Use supplied artwork rather than redrawing, stretching, recolouring, or cropping it to manufacture a missing variant. Keep the wording and colours of the selected asset intact.
+- This is selection guidance based on the supplied files, not a licence or permission grant. The repository does not specify formal clear-space, minimum-size, print-colour, or licensing rules. Obtain those requirements and any needed usage approval from the brand owner; do not infer them from public availability.
+- When returning a selection, give the brand, variant, intended background, actual pixel dimensions, and direct PNG URL. Mention any unresolved background, format, or source-access limitation.
